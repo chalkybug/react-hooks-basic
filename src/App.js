@@ -1,10 +1,14 @@
 import logo from './logo.svg';
 import './App.scss';
+import ColorBox from './components/ColorBox';
 
 function App() {
   return (
     <div className="app">
-      Xin chao
+      <h1> Xin chao</h1>
+
+      <ColorBox />
+
     </div>
   );
 }
