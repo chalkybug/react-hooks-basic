@@ -65,3 +65,51 @@ Tạo một form đơn giản như sau
     - Tạo thêm một todo mới vào danh sách
 
 
+## 06-Những điều cần biết về useEffect
+#### Side effects là gì? Có bao nhiêu loại?
+
+Side effects là gì?
+
+- Gọi API lấy dữ liệu
+- TƯơng tác với DOM
+- Subscriptions
+- setTimeout, setInterval
+
+#### Theo tài liệu chính thức thì chia làm 2 loại side effects"
+1. Effect không cần `clean up`: Gọi API, tương tác DOM
+2. Effects `cần clean up`: Subscriptions, setTimeout, setInterval
+
+#### Giới thiệu useEffect()
+
+- là một hook cơ bản trong React hooks.
+- Sử dụng cho side effects
+- Mỗi hook gồm 2 phầm : `side effect` và `clean up`(optional)
+- Được thực thi sau mỗi lần render
+- Được thực thi ít nhất một lần sau lần render đầu tiên
+- Những lần render sau, chỉ được thực thi nếu có dependencies thay đổi
+- Effect cleanup sẽ được thực thi trước run effect lần tiếp theo hoặc unmount
+
+#### Ví dụ
+
+```javascript
+function App(){
+    //executed before each render
+    const [color, setColor] = useState('pink');
+
+    // executed after each render
+    useEffect(()=>{
+        // do your side effect here...
+        return()=>{
+            // Clean up here ...
+            // Executed before the next render or unmount
+        };
+    },[]);
+    
+    //rendering
+    return <h1>THe Font End</h1>
+
+}
+
+```
+
+
