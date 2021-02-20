@@ -58,3 +58,10 @@ const todoList = [
 
 
 ## 05-Cách dùng useState() đơn giản
+Tạo một form đơn giản như sau
+- Chứa một thẻ input để có thể nhập dữ liệu
+- Khi form submit
+    - Chặn trình duyệt reload
+    - Tạo thêm một todo mới vào danh sách
+
+
