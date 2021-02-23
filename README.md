@@ -187,3 +187,24 @@ onPageChange={handlePageChange}
 
 - cài đặt thư viện ` query-string`
     - npm i --save query-string
+
+
+
+
+## 09 - useEffect search có debounce
+- Props:
+    - onSubmit: gọi hàm này mỗi khi có filterthay đổi.
+- State: searchTerm
+- Render: form > input[type=text]
+- Lưu ý: đợi user nhập xong rồi mới gọi API (áp dụng kĩ thuật debounce đơn giản)
+Cách sử dụng PostFiltersForm
+```javascript
+function App() {
+    function handleFiltersChange(newFilters) {
+        // Call API to re-fetch data with new filters
+    }
+    return (
+        <PostFiltersForm onSubmit={handleFiltersChange} />
+    );
+}
+```

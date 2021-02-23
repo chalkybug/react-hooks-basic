@@ -5,6 +5,7 @@ import PostList from './components/PostList';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import queryString from 'query-string';
+import PostFilterForm from './components/PostFiltersForm';
 
 function App() {
   const [todoList, setTodoList] = useState(
@@ -25,6 +26,7 @@ function App() {
   const [filters, setFilters] = useState({
     _page: 1,
     _limit: 10,
+    title_like: '',
   });
 
   useEffect(() => {
@@ -87,11 +89,22 @@ function App() {
     setTodoList(newTodoList);
   }
 
+  function handleFiltersChange(newFilters) {
+    console.log("new filter: ", newFilters);
+    // vì có thể thêm điều kiện làm page nhỏ đi nên cần reset lại page=1
+    setFilters({
+      ...filters,
+      _page: 1,
+      title_like: newFilters.searchTerm,
+    })
+  }
+
   return (
     <div className="app">
       <h1>React Hook - TodoList</h1>
       {/* <TodoForm onSubmit={handleTodoFormSubmit} />
       <TodoList todos={todoList} onTodoClick={handleTodoClick} /> */}
+      <PostFilterForm onSubmit={handleFiltersChange} />
       <PostList posts={postList} />
       <Pagination
         pagination={pagination}
