@@ -112,4 +112,41 @@ function App(){
 
 ```
 
+## 07- Gọi API với useEffect hooks
+Lấy danh sách Posts từ server và hiển thị lên UI
+Tạo một component PostList hiển thị một list ul, li đơn giản với props là danh sách posts.
+1. Giới thiệu PostsAPI
+Lấy danh sách posts
+```
+GET http://js-post-api.herokuapp.com/api/posts?_limit=10&_page=1
+```
+Trong đó:
+- _limit: cho biết số posts mỗi trang
+- _page: cho biết trang hiện tại
+Kết quả mẫu trả về:
+```json
+{
+"data": [
+{
+"id": "3dcbecdc-ec4c-4b71-b7f8-2379d2c4df98",
+"title": "Quis vitae",
+"author": "Shyann Weissnat",
+"description": "omnis voluptatem id quo non vel corrupti voluptate
+non eum ratione a laboriosam sit ut consequatur repellendus et fugiat non
+eum consectetur aliquam voluptates et eius dolor possimus deleniti quis
+molestias aspernatur sint voluptas quia voluptatem odit doloribus
+distinctio dolores officia est ad dolores reprehenderit commodi
+consequuntur vitae eaque tempore",
+"createdAt": 1584839168726,
+"updatedAt": 1584839168726,
+"imageUrl": "https://picsum.photos/id/919/1368/400"
+},
+],
+"pagination": {
+"_page": 1,
+"_limit": 1,
+"_totalRows":50
+    }
+}
 
+```
