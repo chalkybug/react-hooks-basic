@@ -150,3 +150,40 @@ consequuntur vitae eaque tempore",
 }
 
 ```
+
+## 08- Pagination với useEffect hook
+Cài đặt component Pagination
+- Có 2 nút: Prev, Next
+- Props:
+    - pagination:required
+    - onPageChange: hàm sẽ được gọi nếu user click nút next hoặc prev.
+- State: N/A
+- Render:
+    - Nút prev: trigger hàm onPageChange với page = page - 1
+    - Nút next: trigger hàm onPageChange với page = page + 1
+- Lưu ý:
+    - Nút prev sẽ bị disable nếu đang ở trang 1.
+    - Nút next sẽ bị disable nếu đang ở trang cuối.
+
+Cách sử dụng Pagination
+```javascript
+function App() {
+const [pagination, setPagination] = useState({
+_page: 1,
+_limit: 10,
+_totalRows: 1
+});
+function handlePageChange(newPage) {
+// Call API to re-fetch data with newPage
+}
+return (
+<Pagination
+pagination={pagination}
+onPageChange={handlePageChange}
+/>
+);
+}
+```
+
+- cài đặt thư viện ` query-string`
+    - npm i --save query-string
