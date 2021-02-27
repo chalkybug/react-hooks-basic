@@ -6,6 +6,7 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import queryString from 'query-string';
 import PostFilterForm from './components/PostFiltersForm';
+import Clock from './components/Clock';
 
 function App() {
   const [todoList, setTodoList] = useState(
@@ -99,6 +100,11 @@ function App() {
     })
   }
 
+  const [showClock, setShowClock] = useState(true);
+
+
+
+
   return (
     <div className="app">
       <h1>React Hook - TodoList</h1>
@@ -110,6 +116,8 @@ function App() {
         pagination={pagination}
         onPageChange={handlePageChange}
       />
+      {showClock && <Clock />}
+      <button onClick={() => { setShowClock(false) }}>Hide clock</button>
     </div>
   );
 }

@@ -9,6 +9,9 @@ p{color:Black !important;}
 ## Những phím tắt cần dùng cho VScode
 - optimize import: `Alt + Shift + O for Windows`
 - Gõ `rsfp` sau khi cài extention `Reactjs Code Snippets`: sinh code
+- Select các biến thì trỏ và `Ctrl + D`
+
+
 ## Cài đặt
 1. `Ctrl + ~` để mở terminal
 2. Chạy lênh npx create-react-app react-hooks-basic
@@ -208,3 +211,8 @@ function App() {
     );
 }
 ```
+
+## 10 - useEffect cleanup với code đồng hồ
+
+
+
