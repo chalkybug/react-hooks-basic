@@ -213,6 +213,22 @@ function App() {
 ```
 
 ## 10 - useEffect cleanup với code đồng hồ
+- Select các biến thì trỏ và `Ctrl + D`
+- Thêm `{}` thì bôi đen và nhấn `Shift + {` nhớ tắt vietkey
+- Custom user snipnet để gõ nhanh hơn 
+```
+	"Const ": {
+		"prefix": "const",
+		"body": [
+			"const [$1, $2] = useState($3);",
+			"$4"
+		],
+		"description": "Const useState"
+	}
+```
+
+## 11 - Giới thiệu tổng quát custom hooks (2020)
+
 
 
 
