@@ -7,6 +7,7 @@ import TodoList from './components/TodoList';
 import queryString from 'query-string';
 import PostFilterForm from './components/PostFiltersForm';
 import Clock from './components/Clock';
+import BetterClock from './components/BetterClock';
 
 function App() {
   const [todoList, setTodoList] = useState(
@@ -118,6 +119,7 @@ function App() {
       />
       {showClock && <Clock />}
       <button onClick={() => { setShowClock(false) }}>Hide clock</button>
+      <BetterClock />
     </div>
   );
 }
