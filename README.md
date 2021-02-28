@@ -236,4 +236,9 @@ function App() {
 
 ## 14 - Giới thiệu Memoization và React.memo
 
+## 15 - So sánh useCallback và useMemo
+- useCallback() dùng cho function
+- useValue() dùng cho giá trị
+- KHông nên dùng cho tất cả components
+- Nên dùng cho: đồ thị, biểu đồ, animations, những component nặng phần render
 
