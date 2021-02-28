@@ -234,6 +234,6 @@ function App() {
 
 ## 13 - Code a custom hooks from scratch
 
-
+## 14 - Giới thiệu Memoization và React.memo
 
 
